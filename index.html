@@ -1,0 +1,81 @@
+<div id="app">
+  <section id="intro">
+    <div class="scanner-line"></div>
+    <div class="intro-box">
+      <div class="system-status">ESTABLISHED: 2025.05.12</div>
+      <h2 class="title-text">CREATIVE_ARCHIVE</h2>
+      <button id="revealBtn">
+        <span class="btn-text">DECRYPT JOURNEY</span>
+        <div class="btn-border"></div>
+      </button>
+    </div>
+  </section>
+
+  <section id="mainStage" style="display: none; opacity: 0;">
+    <div class="content-wrapper">
+      <p class="brand-tag">MULTIMODAL CREATIVE // MILESTONE_351</p>
+      
+      <div class="milestone-container">
+        <div class="sculptural-text">351</div>
+        <h1 class="tracking-text">FOLLOWERS</h1>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="story-content">
+        <h3 class="gradient-sub">THE EVOLUTION</h3>
+        
+        <p class="story-para">
+          It all started on <strong>May 12, 2025</strong>. Back then, it was just about putting ideas into the world. I didn't want to be boxed into one thing. I wanted to show the world the beauty of a <strong>clean edit</strong>, the precision of a <strong>pencil stroke</strong>, the weight of a <strong>meaningful quote</strong>, and the soul of the <strong>flute</strong>.
+        </p>
+
+        <p class="story-para">
+          This journey has been a constant balance between different worlds. One day it's about the technical grind of a tutorial, the next it’s about the emotional impact of a cinematic sequence. To those who followed for the art, the music, or the words—thank you for seeing the vision in the variety.
+        </p>
+        
+        <p class="story-para">
+          Reaching <strong>351 followers</strong> is a sign that this blend of creativity is working. Whether you're here to learn the flute, watch a drawing come to life, or just find some inspiration in a quote, you've helped build this archive into something special.
+        </p>
+
+        <p class="gratitude-big">
+          351 Minds. One Creative Journey.
+        </p>
+
+        <p class="closing-vision">
+          More edits. More art. More music. <br>
+          <strong>THE GRIND NEVER STOPS. THANK YOU FOR BEING HERE.</strong>
+        </p>
+      </div>
+
+      <div class="glow-line"></div>
+    </div>
+  </section>
+  
+  <div id="flash"></div>
+</div>
+
+<script>
+  const btn = document.getElementById('revealBtn');
+  const intro = document.getElementById('intro');
+  const stage = document.getElementById('mainStage');
+  const flash = document.getElementById('flash');
+
+  btn.addEventListener('click', function() {
+    flash.style.transition = 'none';
+    flash.style.opacity = '1';
+    
+    setTimeout(() => {
+      intro.style.display = 'none';
+      stage.style.display = 'flex';
+      
+      setTimeout(() => {
+        stage.style.opacity = '1';
+        stage.style.transition = 'opacity 2.5s ease-out, transform 2s ease-out';
+        stage.style.transform = 'translateY(0)';
+      }, 50);
+
+      flash.style.transition = 'opacity 1.5s ease-out';
+      flash.style.opacity = '0';
+    }, 150);
+  });
+</script>
